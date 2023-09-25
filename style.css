@@ -1,0 +1,272 @@
+/*ROOT STYLE*/
+
+:root,
+:root.theme-2 {
+  --main-bg-color: hsl(0, 0%, 90%);
+  --toggleAndButtonsContainer-bg-color: hsl(0, 5%, 81%);
+  --display-bg-color: hsl(0, 0%, 93%);
+
+  --delAndReset-bg-color: hsl(185, 42%, 37%);
+  --delAndReset-shadow: 0px 15px 20px -8px hsl(185, 58%, 25%);
+
+  --equalsAndToggle-bg-color: hsl(25, 98%, 40%);
+  --equals-shadow: 0px 15px 20px -8px hsl(25, 99%, 27%);
+
+  --Keypad-bg-color: hsl(45, 7%, 89%);
+  --keypad-shadow: 0px 15px 20px -8px hsl(35, 11%, 61%);
+
+  --text-color: hsl(60, 10%, 19%);
+  --delAndReset-text-color: hsl(0, 0%, 100%);
+}
+
+:root.theme-1 {
+  --main-bg-color: hsl(222, 26%, 31%);
+  --toggleAndButtonsContainer-bg-color: hsl(223, 31%, 20%);
+  --display-bg-color: hsl(224, 36%, 15%);
+
+  --delAndReset-bg-color: hsl(225, 21%, 49%);
+  --delAndReset-shadow: 0px 15px 20px -8px hsl(224, 28%, 35%);
+
+  --equalsAndToggle-bg-color: hsl(6, 63%, 50%);
+  --equals-shadow: 0px 15px 20px -8px hsl(6, 70%, 34%);
+
+  --Keypad-bg-color: hsl(30, 25%, 89%);
+  --keypad-shadow: 0px 15px 20px -8px hsl(28, 16%, 65%);
+
+  --text-color: hsl(221, 14%, 31%);
+  --delAndReset-text-color: hsl(0, 0%, 100%);
+}
+
+:root.theme-3 {
+  --main-bg-color: hsl(268, 75%, 9%);
+  --toggleAndButtonsContainer-bg-color: hsl(268, 71%, 12%);
+  --display-bg-color: hsl(268, 71%, 12%);
+
+  --delAndReset-bg-color: hsl(281, 89%, 26%);
+  --delAndReset-shadow: 0px 15px 20px -8px hsl(285, 91%, 52%);
+
+  --equalsAndToggle-bg-color: hsl(176, 100%, 44%);
+  --equals-shadow: 0px 15px 20px -8px hsl(177, 92%, 70%);
+
+  --Keypad-bg-color: hsl(268, 47%, 21%);
+  --keypad-shadow: 0px 15px 20px -8px hsl(290, 70%, 36%);
+
+  --text-color: hsl(52, 100%, 62%);
+  --delAndReset-text-color: hsl(0, 0%, 100%);
+}
+
+/* 
+*****************
+GENERAL STYLE
+******************
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  padding: 3%;
+}
+
+div {
+  border-radius: 10px;
+}
+
+/* 
+*****************
+OUTER CONTAINER STYLE
+******************
+*/
+
+.outer-container {
+  background-color: var(--main-bg-color);
+  max-width: 400px;
+  padding: 5%;
+  display: grid;
+  grid-template-areas:
+    "top"
+    "display"
+    "buttons";
+  grid-template-rows: 5% 10% 1fr;
+  row-gap: 7%;
+  height: 90vh;
+}
+
+/* 
+*****************
+THEME CONTAINERS STYLE
+******************
+*/
+
+.top-container {
+  grid-area: top;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  justify-self: center;
+  padding: 0 10px;
+}
+
+.top-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.theme-text {
+  grid-row-start: 2;
+  font-weight: 700;
+}
+
+.theme-indicator {
+  margin-left: 2px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-indicator-number {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding: 0 8px;
+}
+
+.theme-indicator-number > button {
+  border-style: none;
+  width: 15px;
+  border-radius: 50px;
+  flex: 1;
+  background-color: none;
+  background-color: inherit;
+}
+
+.theme-indicator-box {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  width: 100%;
+  height: auto;
+  background-color: var(--toggleAndButtonsContainer-bg-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.theme-1-indicator {
+  background-color: hsl(223, 31%, 20%);
+}
+
+.theme-2-indicator {
+  background-color: hsl(0, 5%, 81%) !important;
+}
+
+.theme-3-indicator {
+  background-color: hsl(268, 71%, 12%) !important;
+  color: white;
+}
+
+.theme-1 {
+  height: 25px;
+  width: 25px;
+  background-color: var(--equalsAndToggle-bg-color);
+  border-radius: 1200px;
+}
+
+.theme-3 {
+  height: 25px;
+  width: 25px;
+  background-color: var(--equalsAndToggle-bg-color);
+  border-radius: 1200px;
+}
+
+.theme-2 {
+  height: 25px;
+  width: 25px;
+  background-color: var(--equalsAndToggle-bg-color);
+  border-radius: 1200px;
+}
+
+.calc-text {
+  font-size: 1.5rem;
+}
+
+/* 
+*****************
+DISPLAY CONTAINER STYLE
+******************
+*/
+
+.display-container {
+  grid-area: display;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 100%;
+  background-color: var(--display-bg-color);
+}
+
+/* 
+*****************
+BUTTON CONTAINERS STYLE
+******************
+*/
+
+.buttons-container {
+  grid-area: buttons;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4%;
+  padding: 5%;
+  background-color: var(--toggleAndButtonsContainer-bg-color);
+}
+
+.item {
+  border-radius: 10px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 1.6rem;
+  border-style: none;
+  box-shadow: var(--keypad-shadow);
+}
+
+.reset,
+.del {
+  background-color: var(--delAndReset-bg-color);
+  font-size: 1rem;
+  color: var(--delAndReset-text-color);
+  box-shadow: var(--delAndReset-shadow);
+}
+
+.reset:hover,
+.del:hover {
+  background-color: hsl(185, 58%, 25%, 0.9);
+}
+
+.equals:hover {
+  background-color: hsl(25, 98%, 40%, 0.9);
+}
+
+.reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.equals {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.equals {
+  background-color: var(--equalsAndToggle-bg-color);
+  box-shadow: var(--equals-shadow --equals-shadow);
+}
