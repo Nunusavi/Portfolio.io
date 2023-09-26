@@ -5,12 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+  
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Calculator app</title>
+    <title>Calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -64,9 +59,11 @@
           </div>
         </div>
       </div>
-      <div data-previous-operand class="previous-operand"></div>
-      <div data-current-operand class="current-operand"></div>
-      <div class="display-container"></div>
+      
+      <div class="display-container">
+          <div data-previous-operand class="previous-operand"></div>
+        <div data-current-operand class="current-operand"></div>
+      </div>
       
       <div class="buttons-container">
         <button data-number class=" item number seven">7</button>
@@ -76,19 +73,23 @@
         <button data-number class=" item number four">4</button>
         <button data-number class=" item number five">5</button>
         <button data-number class=" item number six">6</button>
-        <button data-operator class=" item operator addition">+</button>
+        <button data-operation class=" item operator addition">+</button>
         <button data-number class=" item number one">1</button>
         <button data-number class=" item number two">2</button>
         <button data-number class=" item number three">3</button>
-        <button data-operator class=" item operator subtraction">-</button>
+        <button data-operation class=" item operator subtraction">-</button>
         <button data-number class=" item utility dot">.</button>
         <button data-number class=" item number zero">0</button>
-        <button data-operator class=" item operator division">/</button>
-        <button data-operator class=" item operator multiplication">x</button>
+        <button data-operation class=" item operator division">/</button>
+        <button data-operation class=" item operator multiplication">x</button>
         <button data-all-clear class=" item utility reset">RESET</button>
         <button data-equals class=" item utility equals">=</button>
       </div>
     </div>
     <script src="calculator.js"></script>
   </body>
+  <script>
+    //code that let's me change the theme of the calculator from button 1 to button 2 and button 3
+    
+  </script>
 </html>

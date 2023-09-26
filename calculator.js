@@ -16,8 +16,12 @@ class Calculator {
     }
   
     appendNumber(number) {
-      if (number === '.' && this.currentOperand.includes('.')) return
+      if (number === '.' && this.currentOperand.includes('.')) {
+        console.log('debug 1');
+        return
+      }
       this.currentOperand = this.currentOperand.toString() + number.toString()
+      console.log('debug 2');
     }
   
     chooseOperation(operation) {
