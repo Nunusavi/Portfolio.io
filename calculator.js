@@ -46,10 +46,10 @@ class Calculator {
         case '-':
           computation = prev - current
           break
-        case '*':
+        case 'x':
           computation = prev * current
           break
-        case '÷':
+        case '/':
           computation = prev / current
           break
         default:
