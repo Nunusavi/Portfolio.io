@@ -37,31 +37,18 @@
         <div class="calc-text">Calc</div>
         <div class="top-right">
           <div class="theme-text">Theme</div>
-          <div class="theme-indicator-number">
-            <button
-              class="theme-1-indicator theme-1"
-              onclick="setTheme('theme-1')"
-            >
-              1
-            </button>
-            <button
-              class="theme-2-indicator theme-2"
-              onclick="setTheme('theme-2')"
-            >
-              2
-            </button>
-            <button
-              class="theme-3-indicator theme-3"
-              onclick="setTheme('theme-2')"
-            >
-              3
-            </button>
-          </div>
-          <div class="theme-indicator-box">
-            <div class="theme-box-1"></div>
-            <div class="theme-box-2"></div>
-            <div class="theme-box-3"></div>
-          </div>
+          <form class="theme-selector">
+            <fieldset>
+              <input type="checkbox" id="blue" name="theme-1" value="K" />
+              <label for="theme"></label><br />
+
+              <input type="checkbox" id="gray" name="theme-2" value="S" />
+              <label for="theme"></label><br />
+
+              <input type="checkbox" id="violet" name="theme-3" value="M" />
+              <label for="theme"></label>
+            </fieldset>
+          </form>
         </div>
       </div>
       <div class="display-container"></div>
