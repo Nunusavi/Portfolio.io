@@ -1,7 +1,7 @@
 /*ROOT STYLE*/
 
 :root,
-:root.theme-2 {
+:root:has(#gray:checked) {
   --main-bg-color: hsl(0, 0%, 90%);
   --toggleAndButtonsContainer-bg-color: hsl(0, 5%, 81%);
   --display-bg-color: hsl(0, 0%, 93%);
@@ -18,8 +18,7 @@
   --text-color: hsl(60, 10%, 19%);
   --delAndReset-text-color: hsl(0, 0%, 100%);
 }
-
-:root.theme-1 {
+:root:has(#blue:checked) {
   --main-bg-color: hsl(222, 26%, 31%);
   --toggleAndButtonsContainer-bg-color: hsl(223, 31%, 20%);
   --display-bg-color: hsl(224, 36%, 15%);
@@ -33,11 +32,10 @@
   --Keypad-bg-color: hsl(30, 25%, 89%);
   --keypad-shadow: 0px 15px 20px -8px hsl(28, 16%, 65%);
 
-  --text-color: hsl(221, 14%, 31%);
+  --text-color: white;
   --delAndReset-text-color: hsl(0, 0%, 100%);
 }
-
-:root.theme-3 {
+:root:has(#violet:checked) {
   --main-bg-color: hsl(268, 75%, 9%);
   --toggleAndButtonsContainer-bg-color: hsl(268, 71%, 12%);
   --display-bg-color: hsl(268, 71%, 12%);
@@ -65,7 +63,7 @@ GENERAL STYLE
   margin: 0;
   padding: 0;
   font-family: "League Spartan", sans-serif;
-  box-sizing: border-box;
+
   font-weight: 700;
 }
 
@@ -89,6 +87,7 @@ OUTER CONTAINER STYLE
 
 .outer-container {
   background-color: var(--main-bg-color);
+  width: 80vw;
   max-width: 400px;
   padding: 5%;
   display: grid;
@@ -98,7 +97,7 @@ OUTER CONTAINER STYLE
     "buttons";
   grid-template-rows: 5% 10% 1fr;
   row-gap: 7%;
-  height: 90vh;
+  height: 600px;
 }
 
 /* 
@@ -131,22 +130,49 @@ fieldset {
   flex-direction: row;
   gap: 0.1rem;
   width: fit-content;
-  background-color: aquamarine;
+  background-color: white;
   padding: 5px;
+  border-radius: 0;
+  border-style: none;
 }
 
 .calc-text {
   font-size: 1.5rem;
+  color: var(--text-color);
 }
 
-input[type="checkbox"] {
+.calc-text {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.theme-text {
+  color: var(--text-color);
+}
+
+input[type="radio"] {
+  margin: 5px;
   appearance: none;
-  height: 1.2rem;
-  width: 1.2rem;
-  outline-offset: 5px;
+  height: 0.7rem;
+  width: 0.7rem;
+  outline-offset: 2px;
   border-radius: 50%;
-  border: 3px solid red;
-  background-color: green;
+  outline: 3px solid var(--radio-color);
+}
+
+input[type="radio"]:checked {
+  background-color: var(--radio-color);
+}
+
+#blue {
+  --radio-color: darkblue;
+}
+
+#gray {
+  --radio-color: hsl(0, 5%, 81%);
+}
+#violet {
+  --radio-color: darkviolet;
 }
 
 /* 
@@ -162,7 +188,6 @@ DISPLAY CONTAINER STYLE
   width: 100%;
   background-color: var(--display-bg-color);
 }
-
 
 /* 
 *****************
