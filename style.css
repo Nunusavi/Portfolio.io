@@ -63,7 +63,7 @@ GENERAL STYLE
   margin: 0;
   padding: 0;
   font-family: "League Spartan", sans-serif;
-
+  box-sizing: border-box;
   font-weight: 700;
 }
 
@@ -123,16 +123,25 @@ THEME CONTAINERS STYLE
 .theme-text {
   grid-row-start: 1;
   font-weight: 700;
+  justify-self: center;
+  align-self: center;
+}
+
+form {
+  justify-self: flex-start;
+  align-self: flex-end;
+  margin: 0;
 }
 
 fieldset {
+  margin: 0;
   display: flex;
   flex-direction: row;
   gap: 0.1rem;
   width: fit-content;
-  background-color: white;
+  background-color: var(--Toggle-bg-color);
   padding: 5px;
-  border-radius: 0;
+  border-radius: 6px;
   border-style: none;
 }
 
@@ -153,11 +162,11 @@ fieldset {
 input[type="radio"] {
   margin: 5px;
   appearance: none;
-  height: 0.7rem;
-  width: 0.7rem;
+  height: 0.5rem;
+  width: 0.5rem;
   outline-offset: 2px;
   border-radius: 50%;
-  outline: 3px solid var(--radio-color);
+  outline: 2px solid var(--radio-color);
 }
 
 input[type="radio"]:checked {
@@ -187,6 +196,10 @@ DISPLAY CONTAINER STYLE
   grid-row-end: 3;
   width: 100%;
   background-color: var(--display-bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 /* 
